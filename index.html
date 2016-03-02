@@ -64,33 +64,6 @@
       <div class="outer">
         <section id="main">
   
-    <article id="post-swift/动态更改UITableView Footer高度" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2016/03/02/swift/动态更改UITableView Footer高度/" class="article-date">
-  <time datetime="2016-03-02T14:41:32.000Z" itemprop="datePublished">2016-03-02</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h1 id="动态更改UITableView-Footer高度"><a href="#动态更改UITableView-Footer高度" class="headerlink" title="动态更改UITableView Footer高度"></a>动态更改UITableView Footer高度</h1><p>override 所在UIViewController的 viewDidLayoutSubviews方法</p>
-<figure class="highlight swift"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">override</span> <span class="function"><span class="keyword">func</span> <span class="title">viewDidLayoutSubviews</span><span class="params">()</span></span> &#123;</span><br><span class="line">		<span class="keyword">super</span>.viewDidLayoutSubviews()</span><br><span class="line">		</span><br><span class="line">		<span class="keyword">if</span> <span class="keyword">let</span> footView = tableView.tableFooterView &#123;</span><br><span class="line">		<span class="comment">//footerContentView 是footerView的内容视图，它使用自动布局来自适应高度，然后在代码里面获取高度变更footerView 的高度</span></span><br><span class="line">			<span class="keyword">let</span> height = footerContentView.systemLayoutSizeFittingSize(<span class="type">UILayoutFittingCompressedSize</span>).height</span><br><span class="line">			<span class="keyword">if</span> height != footerView.frame.height &#123;</span><br><span class="line">				<span class="built_in">print</span>(<span class="string">"new height=<span class="subst">\(height)</span>"</span>)</span><br><span class="line">				footView.frame.size.height = height</span><br><span class="line">				tableView.tableFooterView = footView</span><br><span class="line">			&#125;</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br></pre></td></tr></table></figure>
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://yoursite.com/2016/03/02/swift/动态更改UITableView Footer高度/" data-id="cilaybu230000uqthd1yi1jat" class="article-share-link">Share</a>
-      
-      
-    </footer>
-  </div>
-  
-</article>
-
-
-  
     <article id="post-hello-world" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
     <a href="/2016/03/02/hello-world/" class="article-date">
@@ -164,10 +137,6 @@
     <h3 class="widget-title">Recent Posts</h3>
     <div class="widget">
       <ul>
-        
-          <li>
-            <a href="/2016/03/02/swift/动态更改UITableView Footer高度/">(no title)</a>
-          </li>
         
           <li>
             <a href="/2016/03/02/hello-world/">Hello World</a>
